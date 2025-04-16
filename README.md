@@ -1,4 +1,5 @@
 # Gravity Cubes 2D
+![Демонстрация игры](gif_readme/video_example.gif)
 
 A 2D physics sandbox game built with Pygame where you can create and interact with objects that obey gravity, collision, and physics laws.
 
