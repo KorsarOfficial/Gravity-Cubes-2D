@@ -1,7 +1,7 @@
 # Gravity Cubes 2D
 ![Демонстрация игры](gif_readme/video_example.gif)
 
-A 2D physics sandbox game built with Pygame where you can create and interact with objects that obey gravity, collision, and physics laws.
+A 2D physics sandbox game built with Taichi Lang where you can create and interact with objects that obey gravity, collision, and physics laws.
 
 ## Features
 
@@ -11,15 +11,14 @@ A 2D physics sandbox game built with Pygame where you can create and interact wi
 - Object creation via mouse clicks
 - Camera controls and zoom
 - Debug information display
-- Save and load game states
-- Multiple preset levels
+- High-performance parallel computing using Taichi Lang
 
 ## Installation
 
 1. Make sure you have Python installed (Python 3.6 or newer recommended)
 2. Install the required dependencies:
    ```
-   pip install pygame
+   pip install taichi
    ```
 3. Run the game:
    ```
@@ -39,9 +38,6 @@ A 2D physics sandbox game built with Pygame where you can create and interact wi
 - **R**: Reset the game
 - **F1**: Toggle debug mode
 - **ESC**: Exit the game
-- **1, 2, 3**: Load preset levels
-- **F5**: Save game
-- **F9**: Load game
 
 ## Game Mechanics
 
@@ -77,10 +73,6 @@ A 2D physics sandbox game built with Pygame where you can create and interact wi
 - Affected by gravity
 - Add visual feedback to interactions
 
-## Saving and Loading
-
-The game supports saving your current setup to a file and loading it later. You can also load preset levels.
-
 ## Debug Mode
 
 Press F1 to toggle debug information, which shows:
@@ -89,13 +81,23 @@ Press F1 to toggle debug information, which shows:
 - Number of particles
 - Camera position and zoom level
 
-## Custom Levels
+## Technical Details
 
-You can create custom levels by saving your game setup and renaming the save file to `level1.txt`, `level2.txt`, or `level3.txt`.
+The entire application is built using Taichi Lang, which provides:
+- Parallel physics computations on CPU and GPU
+- Automatic vectorization and parallelization
+- Rendering through Taichi UI
+- User input handling
+
+The codebase leverages Taichi's kernels and fields for:
+- Efficient storage and manipulation of simulation data
+- Parallelized physics calculations
+- High-performance rendering
+- Optimized collision detection
 
 ## Extending the Game
 
-The codebase is designed to be extensible. You can add new object types, physics behaviors, or game mechanics by modifying the appropriate classes in `main.py`.
+The codebase is designed to be extensible. You can add new object types, physics behaviors, or game mechanics by modifying the appropriate functions in `main.py`.
 
 ## License
 
